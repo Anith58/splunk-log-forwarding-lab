@@ -18,9 +18,13 @@ This project sets up a basic SOC-like environment to forward logs from Windows s
 
 ```bash
 wget -O splunk.tgz 'https://download.splunk.com/products/splunk/releases/10.0.0/linux/splunk-10.0.0-xxxxxxx.tgz'
+
 tar -xvzf splunk.tgz
+
 sudo mv splunk /opt/
+
 sudo /opt/splunk/bin/splunk start --accept-license
+
 /opt/splunk/bin/splunk enable listen 9997 -auth admin:yourpassword
 ```
 
